@@ -56,7 +56,6 @@ function removeTodo(todo) {
         url: deleteUrl
     })
         .then(function (data) {
-            console.log("--------");
             todo.remove();
         })
         .catch(function (err) {

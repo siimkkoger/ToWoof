@@ -3,7 +3,36 @@
 body {
     font-family: 'Montserrat', sans-serif;
     background: #ecf0f1;
+    margin: 0px;
+    padding:0px;
 }
+
+/***************************** NAVBAR STYLE ****************************/
+#Navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+#Navbar li {
+    float: left;
+}
+
+#Navbar li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+#Navbar li a:hover {
+    background-color: #111;
+}
+
 /*****************************HEADER STYLES*****************************/
 header {
     text-align: center;
@@ -22,15 +51,15 @@ header h2 {
     font-weight:300;
 }
 /*****************************FORM STYLES*****************************/
-.form {
-    width: 800px;
-    margin: 50px auto 20px;
-}
+
 #todoInput {
     width: 100%;
     height: 60px;
+    margin: 0 auto;
     background: none;
+    background: #ebeeea;
     border: none;
+
     border-bottom: 1px solid #34495e;
     outline: none;
     font: 300 28px 'Ubuntu', sans-serif;
@@ -39,8 +68,9 @@ header h2 {
 }
 /*****************************LIST STYLES*****************************/
 .list {
-    width: 800px;
+    width: 100%;
     margin: 0 auto;
+    list-style-type: none;
 }
 .task {
     width: 100%;
@@ -51,6 +81,12 @@ header h2 {
     color: #34495e;
     transition: all .3s ease;
 }
+.task:nth-child(odd){
+    background: #f9f9f9;
+}.task:nth-child(even){
+     background: #c6c6c6;
+ }
+
 .task:hover {
     background: rgba(0, 0, 0, .02);
     cursor: pointer;
@@ -70,4 +106,26 @@ li span {
 }
 li span:hover {
     color: #e74c3c
+}
+/***************************** Lists *****************************/
+
+
+/***************************** Todoo Info *****************************/
+
+/***************************** CONTAINER STYLE *************************/
+
+#Container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+#Container div{
+    flex-grow: 1;
+    background-color: #0bff00;
+    width: 30%;
+    flex-shrink: 1;
+    margin-left: 10px;
+    margin-right: 10px;
 }
